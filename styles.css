@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&family=Lato:ital,wght@0,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body{
+    /* background: #222; */
+    background: linear-gradient(to left, #000000, #434343);
+}
+
+.card{
+    width: 40vw;
+    /* max-width: 600px; */
+    /* min-width: 300px; */
+    color: #fff;
+    text-align: center;
+    border-radius: 2vw;
+    background: linear-gradient(to right, #114357, #f29492); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 7vh auto 0;
+    padding: 4% 2%;
+
+}
+
+.search button img{
+    max-height: 50%;
+    width: auto;
+    padding-top: 5px;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+     color: #555;
+     background: rgb(232, 230, 230);
+     padding: 2% 4%;
+     border-radius: 30px;
+     flex: 1;
+     margin-right: 15px;
+     height: 2.8em;
+     border: 0;
+     outline: 0; /*prevents outline outside the search-box once selected*/
+     font-size: medium;
+
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    width: 3.5em;
+    height: 3.5em;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+@keyframes float {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(12px);}
+    100% {transform: translateY(0px)}
+    
+}
+
+.weather-icon {
+    width: 10vw;
+    margin: 4%;
+    animation-name: float;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+
+.weather h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    
+}
+.weather h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 2%;
+
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10%;
+    padding:2% 8%;
+
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+}
+
+.col img{
+    width: 4vw;
+    margin-right: 2%;
+}
+
+.humidity, .wind {
+    font-size: 1.8rem;
+
+}
+
+.weather{
+    display: none;
+}
+
+.error{
+    margin-top: 2%;
+    color: #ff6961;
+    display: none;
+}
+
+/* Hide default controls */
+.playPauseButton {
+    display: none;
+}
+
+/* Style for custom play/pause button */
+.playPauseButton {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 15vh;
+    right:3vh;
+}
+

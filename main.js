@@ -36,21 +36,24 @@ async function checkWeather(city) {
     console.log(data);
 
     // Set the local time
-    const localTime = new Date((data.dt + data.timezone) * 1000);
-    
-    // Get only the hour from the local time
-    const localHour = localTime.getHours();
+    // const localTime = new Date((data.dt + data.timezone) * 1000);
 
-    let folderName;
-    let isDay;
-    if(localHour>=6 && localHour<=18){
-        folderName="images";
-        isDay=true;
-    }
-    else{
-        folderName="images2";
-        isDay=false;
-    }
+    // console.log("Local Time:", localTime);
+    
+    // // Get only the hour from the local time
+    // const localHour = localTime.getHours();
+    // console.log("Local Hour:", localHour);
+
+    let folderName=  "images";
+    let isDay=true;
+    // if(localHour>=6 && localHour<=18){
+    //     folderName="images";
+    //     isDay=true;
+    // }
+    // else{
+    //     folderName="images2";
+    //     isDay=false;
+    // }
 
 
 
@@ -82,7 +85,7 @@ async function checkWeather(city) {
     if (data.weather[0].main == "Clear") {
         weatherIcon.src = `${folderName}/clear.png`;
         if(isDay){
-            myAudio.src=`sounds/day sunrise.mp3`;
+            myAudio.src=`sounds/sunny day.mp3`;
         }
         else{
             myAudio.src = `sounds/night clear.mp3`;
